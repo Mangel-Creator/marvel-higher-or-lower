@@ -400,7 +400,10 @@ el.copiar.addEventListener('click', async () => {
 
 /* ── Arranque ────────────────────────────────────────────────────────── */
 
-fetch('datos/peliculas.json')
+// `no-cache` no significa "no cachees": significa "pregunta siempre si ha
+// cambiado". GitHub Pages sirve con max-age=600, y el HTML y los datos caducan
+// por separado; sin esto alguien podría quedarse con la tabla antigua.
+fetch('datos/peliculas.json', { cache: 'no-cache' })
   .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
   .then(datos => {
     catalogo = datos.titulos;
