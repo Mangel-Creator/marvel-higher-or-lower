@@ -1,0 +1,5 @@
+datos/_cache/
+
+datos/_log-*.txt
+node_modules/
+.netlify/

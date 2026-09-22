@@ -1,0 +1,1057 @@
+{
+  "extraido": "2026-09-22",
+  "fuente": "https://www.themoviedb.org",
+  "titulos": [
+    {
+      "es": "Iron Man",
+      "anio": 2008,
+      "tipo": "pelicula",
+      "tmdbId": 1726,
+      "tmdbTitulo": "Iron Man",
+      "tmdbAnio": 2008,
+      "taquilla": 585174222,
+      "poster": "img/iron-man-2008.webp"
+    },
+    {
+      "es": "El increíble Hulk",
+      "anio": 2008,
+      "tipo": "pelicula",
+      "tmdbId": 1724,
+      "tmdbTitulo": "The Incredible Hulk",
+      "tmdbAnio": 2008,
+      "taquilla": 264770996,
+      "poster": "img/el-increible-hulk-2008.webp"
+    },
+    {
+      "es": "Iron Man 2",
+      "anio": 2010,
+      "tipo": "pelicula",
+      "tmdbId": 10138,
+      "tmdbTitulo": "Iron Man 2",
+      "tmdbAnio": 2010,
+      "taquilla": 623933331,
+      "poster": "img/iron-man-2-2010.webp"
+    },
+    {
+      "es": "Thor",
+      "anio": 2011,
+      "tipo": "pelicula",
+      "tmdbId": 10195,
+      "tmdbTitulo": "Thor",
+      "tmdbAnio": 2011,
+      "taquilla": 449326618,
+      "poster": "img/thor-2011.webp"
+    },
+    {
+      "es": "Capitán América: El primer vengador",
+      "anio": 2011,
+      "tipo": "pelicula",
+      "tmdbId": 1771,
+      "tmdbTitulo": "Captain America: The First Avenger",
+      "tmdbAnio": 2011,
+      "taquilla": 370569774,
+      "poster": "img/capitan-america-el-primer-vengador-2011.webp"
+    },
+    {
+      "es": "Los Vengadores",
+      "anio": 2012,
+      "tipo": "pelicula",
+      "tmdbId": 24428,
+      "tmdbTitulo": "The Avengers",
+      "tmdbAnio": 2012,
+      "taquilla": 1518815515,
+      "poster": "img/los-vengadores-2012.webp"
+    },
+    {
+      "es": "Iron Man 3",
+      "anio": 2013,
+      "tipo": "pelicula",
+      "tmdbId": 68721,
+      "tmdbTitulo": "Iron Man 3",
+      "tmdbAnio": 2013,
+      "taquilla": 1215577205,
+      "poster": "img/iron-man-3-2013.webp"
+    },
+    {
+      "es": "Thor: El mundo oscuro",
+      "anio": 2013,
+      "tipo": "pelicula",
+      "tmdbId": 76338,
+      "tmdbTitulo": "Thor: The Dark World",
+      "tmdbAnio": 2013,
+      "taquilla": 644783140,
+      "poster": "img/thor-el-mundo-oscuro-2013.webp"
+    },
+    {
+      "es": "Capitán América: El soldado de invierno",
+      "anio": 2014,
+      "tipo": "pelicula",
+      "tmdbId": 100402,
+      "tmdbTitulo": "Captain America: The Winter Soldier",
+      "tmdbAnio": 2014,
+      "taquilla": 714766572,
+      "poster": "img/capitan-america-el-soldado-de-invierno-2014.webp"
+    },
+    {
+      "es": "Guardianes de la Galaxia",
+      "anio": 2014,
+      "tipo": "pelicula",
+      "tmdbId": 118340,
+      "tmdbTitulo": "Guardians of the Galaxy",
+      "tmdbAnio": 2014,
+      "taquilla": 772776600,
+      "poster": "img/guardianes-de-la-galaxia-2014.webp"
+    },
+    {
+      "es": "Vengadores: La era de Ultrón",
+      "anio": 2015,
+      "tipo": "pelicula",
+      "tmdbId": 99861,
+      "tmdbTitulo": "Avengers: Age of Ultron",
+      "tmdbAnio": 2015,
+      "taquilla": 1405403694,
+      "poster": "img/vengadores-la-era-de-ultron-2015.webp"
+    },
+    {
+      "es": "Ant-Man: El hombre hormiga",
+      "anio": 2015,
+      "tipo": "pelicula",
+      "tmdbId": 102899,
+      "tmdbTitulo": "Ant-Man",
+      "tmdbAnio": 2015,
+      "taquilla": 519311965,
+      "poster": "img/ant-man-el-hombre-hormiga-2015.webp"
+    },
+    {
+      "es": "Capitán América: Civil War",
+      "anio": 2016,
+      "tipo": "pelicula",
+      "tmdbId": 271110,
+      "tmdbTitulo": "Captain America: Civil War",
+      "tmdbAnio": 2016,
+      "taquilla": 1155046416,
+      "poster": "img/capitan-america-civil-war-2016.webp"
+    },
+    {
+      "es": "Doctor Strange (Doctor Extraño)",
+      "anio": 2016,
+      "tipo": "pelicula",
+      "tmdbId": 284052,
+      "tmdbTitulo": "Doctor Strange",
+      "tmdbAnio": 2016,
+      "taquilla": 676343174,
+      "poster": "img/doctor-strange-doctor-extrano-2016.webp"
+    },
+    {
+      "es": "Guardianes de la Galaxia Vol. 2",
+      "anio": 2017,
+      "tipo": "pelicula",
+      "tmdbId": 283995,
+      "tmdbTitulo": "Guardians of the Galaxy Vol. 2",
+      "tmdbAnio": 2017,
+      "taquilla": 863756051,
+      "poster": "img/guardianes-de-la-galaxia-vol-2-2017.webp"
+    },
+    {
+      "es": "Spider-Man: Homecoming",
+      "anio": 2017,
+      "tipo": "pelicula",
+      "tmdbId": 315635,
+      "tmdbTitulo": "Spider-Man: Homecoming",
+      "tmdbAnio": 2017,
+      "taquilla": 880978185,
+      "poster": "img/spider-man-homecoming-2017.webp"
+    },
+    {
+      "es": "Thor: Ragnarok",
+      "anio": 2017,
+      "tipo": "pelicula",
+      "tmdbId": 284053,
+      "tmdbTitulo": "Thor: Ragnarok",
+      "tmdbAnio": 2017,
+      "taquilla": 855301806,
+      "poster": "img/thor-ragnarok-2017.webp"
+    },
+    {
+      "es": "Black Panther",
+      "anio": 2018,
+      "tipo": "pelicula",
+      "tmdbId": 284054,
+      "tmdbTitulo": "Black Panther",
+      "tmdbAnio": 2018,
+      "taquilla": 1349926083,
+      "poster": "img/black-panther-2018.webp"
+    },
+    {
+      "es": "Vengadores: Infinity War",
+      "anio": 2018,
+      "tipo": "pelicula",
+      "tmdbId": 299536,
+      "tmdbTitulo": "Avengers: Infinity War",
+      "tmdbAnio": 2018,
+      "taquilla": 2052415039,
+      "poster": "img/vengadores-infinity-war-2018.webp"
+    },
+    {
+      "es": "Ant-Man y la Avispa",
+      "anio": 2018,
+      "tipo": "pelicula",
+      "tmdbId": 363088,
+      "tmdbTitulo": "Ant-Man and the Wasp",
+      "tmdbAnio": 2018,
+      "taquilla": 622674139,
+      "poster": "img/ant-man-y-la-avispa-2018.webp"
+    },
+    {
+      "es": "Capitana Marvel",
+      "anio": 2019,
+      "tipo": "pelicula",
+      "tmdbId": 299537,
+      "tmdbTitulo": "Captain Marvel",
+      "tmdbAnio": 2019,
+      "taquilla": 1131416446,
+      "poster": "img/capitana-marvel-2019.webp"
+    },
+    {
+      "es": "Vengadores: Endgame",
+      "anio": 2019,
+      "tipo": "pelicula",
+      "tmdbId": 299534,
+      "tmdbTitulo": "Avengers: Endgame",
+      "tmdbAnio": 2019,
+      "taquilla": 2799439100,
+      "poster": "img/vengadores-endgame-2019.webp"
+    },
+    {
+      "es": "Spider-Man: Lejos de casa",
+      "anio": 2019,
+      "tipo": "pelicula",
+      "tmdbId": 429617,
+      "tmdbTitulo": "Spider-Man: Far From Home",
+      "tmdbAnio": 2019,
+      "taquilla": 1132723226,
+      "poster": "img/spider-man-lejos-de-casa-2019.webp"
+    },
+    {
+      "es": "Viuda negra",
+      "anio": 2021,
+      "tipo": "pelicula",
+      "tmdbId": 497698,
+      "tmdbTitulo": "Black Widow",
+      "tmdbAnio": 2021,
+      "taquilla": 379751131,
+      "poster": "img/viuda-negra-2021.webp"
+    },
+    {
+      "es": "Shang-Chi y la leyenda de los Diez Anillos",
+      "anio": 2021,
+      "tipo": "pelicula",
+      "tmdbId": 566525,
+      "tmdbTitulo": "Shang-Chi and the Legend of the Ten Rings",
+      "tmdbAnio": 2021,
+      "taquilla": 432243292,
+      "poster": "img/shang-chi-y-la-leyenda-de-los-diez-anillos-2021.webp"
+    },
+    {
+      "es": "Eternals",
+      "anio": 2021,
+      "tipo": "pelicula",
+      "tmdbId": 524434,
+      "tmdbTitulo": "Eternals",
+      "tmdbAnio": 2021,
+      "taquilla": 402064899,
+      "poster": "img/eternals-2021.webp"
+    },
+    {
+      "es": "Spider-Man: No Way Home",
+      "anio": 2021,
+      "tipo": "pelicula",
+      "tmdbId": 634649,
+      "tmdbTitulo": "Spider-Man: No Way Home",
+      "tmdbAnio": 2021,
+      "taquilla": 1921426073,
+      "poster": "img/spider-man-no-way-home-2021.webp"
+    },
+    {
+      "es": "Doctor Strange en el multiverso de la locura",
+      "anio": 2022,
+      "tipo": "pelicula",
+      "tmdbId": 453395,
+      "tmdbTitulo": "Doctor Strange in the Multiverse of Madness",
+      "tmdbAnio": 2022,
+      "taquilla": 955775804,
+      "poster": "img/doctor-strange-en-el-multiverso-de-la-locura-2022.webp"
+    },
+    {
+      "es": "Thor: Love and Thunder",
+      "anio": 2022,
+      "tipo": "pelicula",
+      "tmdbId": 616037,
+      "tmdbTitulo": "Thor: Love and Thunder",
+      "tmdbAnio": 2022,
+      "taquilla": 760928081,
+      "poster": "img/thor-love-and-thunder-2022.webp"
+    },
+    {
+      "es": "Black Panther: Wakanda Forever",
+      "anio": 2022,
+      "tipo": "pelicula",
+      "tmdbId": 505642,
+      "tmdbTitulo": "Black Panther: Wakanda Forever",
+      "tmdbAnio": 2022,
+      "taquilla": 859102154,
+      "poster": "img/black-panther-wakanda-forever-2022.webp"
+    },
+    {
+      "es": "Ant-Man y la Avispa: Quantumanía",
+      "anio": 2023,
+      "tipo": "pelicula",
+      "tmdbId": 640146,
+      "tmdbTitulo": "Ant-Man and the Wasp: Quantumania",
+      "tmdbAnio": 2023,
+      "taquilla": 476071180,
+      "poster": "img/ant-man-y-la-avispa-quantumania-2023.webp"
+    },
+    {
+      "es": "Guardianes de la Galaxia Vol. 3",
+      "anio": 2023,
+      "tipo": "pelicula",
+      "tmdbId": 447365,
+      "tmdbTitulo": "Guardians of the Galaxy Vol. 3",
+      "tmdbAnio": 2023,
+      "taquilla": 845550000,
+      "poster": "img/guardianes-de-la-galaxia-vol-3-2023.webp"
+    },
+    {
+      "es": "The Marvels",
+      "anio": 2023,
+      "tipo": "pelicula",
+      "tmdbId": 609681,
+      "tmdbTitulo": "The Marvels",
+      "tmdbAnio": 2023,
+      "taquilla": 206136825,
+      "poster": "img/the-marvels-2023.webp"
+    },
+    {
+      "es": "Deadpool y Lobezno",
+      "anio": 2024,
+      "tipo": "pelicula",
+      "tmdbId": 533535,
+      "tmdbTitulo": "Deadpool & Wolverine",
+      "tmdbAnio": 2024,
+      "taquilla": 1338073645,
+      "poster": "img/deadpool-y-lobezno-2024.webp"
+    },
+    {
+      "es": "Capitán América: Brave New World",
+      "anio": 2025,
+      "tipo": "pelicula",
+      "tmdbId": 822119,
+      "tmdbTitulo": "Captain America: Brave New World",
+      "tmdbAnio": 2025,
+      "taquilla": 415101577,
+      "poster": "img/capitan-america-brave-new-world-2025.webp"
+    },
+    {
+      "es": "Thunderbolts*",
+      "anio": 2025,
+      "tipo": "pelicula",
+      "tmdbId": 986056,
+      "tmdbTitulo": "Thunderbolts*",
+      "tmdbAnio": 2025,
+      "taquilla": 382436917,
+      "poster": "img/thunderbolts-2025.webp"
+    },
+    {
+      "es": "Los Cuatro Fantásticos: Primeros pasos",
+      "anio": 2025,
+      "tipo": "pelicula",
+      "tmdbId": 617126,
+      "tmdbTitulo": "The Fantastic 4: First Steps",
+      "tmdbAnio": 2025,
+      "taquilla": 521858728,
+      "poster": "img/los-cuatro-fantasticos-primeros-pasos-2025.webp"
+    },
+    {
+      "es": "Spider-Man: Brand New Day",
+      "anio": 2026,
+      "tipo": "pelicula",
+      "tmdbId": 969681,
+      "tmdbTitulo": "Spider-Man: Brand New Day",
+      "tmdbAnio": 2026,
+      "taquilla": 2478502286,
+      "poster": "img/spider-man-brand-new-day-2026.webp"
+    },
+    {
+      "es": "X-Men",
+      "anio": 2000,
+      "tipo": "pelicula",
+      "tmdbId": 447399,
+      "tmdbTitulo": "X-Men: The Mutant Watch",
+      "tmdbAnio": 2000,
+      "taquilla": null,
+      "poster": "img/x-men-2000.webp"
+    },
+    {
+      "es": "X-Men 2",
+      "anio": 2003,
+      "tipo": "pelicula",
+      "tmdbId": 10623,
+      "tmdbTitulo": "Cradle 2 the Grave",
+      "tmdbAnio": 2003,
+      "taquilla": 56500000,
+      "poster": "img/x-men-2-2003.webp"
+    },
+    {
+      "es": "X-Men: La decisión final",
+      "anio": 2006,
+      "tipo": "pelicula",
+      "tmdbId": 36668,
+      "tmdbTitulo": "X-Men: The Last Stand",
+      "tmdbAnio": 2006,
+      "taquilla": 459359555,
+      "poster": "img/x-men-la-decision-final-2006.webp"
+    },
+    {
+      "es": "X-Men orígenes: Lobezno",
+      "anio": 2009,
+      "tipo": "pelicula",
+      "tmdbId": 2080,
+      "tmdbTitulo": "X-Men Origins: Wolverine",
+      "tmdbAnio": 2009,
+      "taquilla": 373062864,
+      "poster": "img/x-men-origenes-lobezno-2009.webp"
+    },
+    {
+      "es": "X-Men: Primera generación",
+      "anio": 2011,
+      "tipo": "pelicula",
+      "tmdbId": 1320751,
+      "tmdbTitulo": "Children of the Atom - Filming X-Men: First Class",
+      "tmdbAnio": 2011,
+      "taquilla": null,
+      "poster": "img/x-men-primera-generacion-2011.webp"
+    },
+    {
+      "es": "Lobezno inmortal",
+      "anio": 2013,
+      "tipo": "pelicula",
+      "tmdbId": 76170,
+      "tmdbTitulo": "The Wolverine",
+      "tmdbAnio": 2013,
+      "taquilla": 415440673,
+      "poster": "img/lobezno-inmortal-2013.webp"
+    },
+    {
+      "es": "X-Men: Días del futuro pasado",
+      "anio": 2014,
+      "tipo": "pelicula",
+      "tmdbId": 127585,
+      "tmdbTitulo": "X-Men: Days of Future Past",
+      "tmdbAnio": 2014,
+      "taquilla": 748045700,
+      "poster": "img/x-men-dias-del-futuro-pasado-2014.webp"
+    },
+    {
+      "es": "X-Men: Apocalipsis",
+      "anio": 2016,
+      "tipo": "pelicula",
+      "tmdbId": 246655,
+      "tmdbTitulo": "X-Men: Apocalypse",
+      "tmdbAnio": 2016,
+      "taquilla": 543934787,
+      "poster": "img/x-men-apocalipsis-2016.webp"
+    },
+    {
+      "es": "Deadpool",
+      "anio": 2016,
+      "tipo": "pelicula",
+      "tmdbId": 293660,
+      "tmdbTitulo": "Deadpool",
+      "tmdbAnio": 2016,
+      "taquilla": 782837347,
+      "poster": "img/deadpool-2016.webp"
+    },
+    {
+      "es": "Logan",
+      "anio": 2017,
+      "tipo": "pelicula",
+      "tmdbId": 263115,
+      "tmdbTitulo": "Logan",
+      "tmdbAnio": 2017,
+      "taquilla": 619021436,
+      "poster": "img/logan-2017.webp"
+    },
+    {
+      "es": "Deadpool 2",
+      "anio": 2018,
+      "tipo": "pelicula",
+      "tmdbId": 383498,
+      "tmdbTitulo": "Deadpool 2",
+      "tmdbAnio": 2018,
+      "taquilla": 785896632,
+      "poster": "img/deadpool-2-2018.webp"
+    },
+    {
+      "es": "X-Men: Fénix Oscura",
+      "anio": 2019,
+      "tipo": "pelicula",
+      "tmdbId": 320288,
+      "tmdbTitulo": "Dark Phoenix",
+      "tmdbAnio": 2019,
+      "taquilla": 252442974,
+      "poster": "img/x-men-fenix-oscura-2019.webp"
+    },
+    {
+      "es": "Los nuevos mutantes",
+      "anio": 2020,
+      "tipo": "pelicula",
+      "tmdbId": 340102,
+      "tmdbTitulo": "The New Mutants",
+      "tmdbAnio": 2020,
+      "taquilla": 49169594,
+      "poster": "img/los-nuevos-mutantes-2020.webp"
+    },
+    {
+      "es": "Los 4 Fantásticos",
+      "anio": 2005,
+      "tipo": "pelicula",
+      "tmdbId": 9738,
+      "tmdbTitulo": "Fantastic Four",
+      "tmdbAnio": 2005,
+      "taquilla": 333535934,
+      "poster": "img/los-4-fantasticos-2005.webp"
+    },
+    {
+      "es": "Los 4 Fantásticos y Silver Surfer",
+      "anio": 2007,
+      "tipo": "pelicula",
+      "tmdbId": 1979,
+      "tmdbTitulo": "Fantastic Four: Rise of the Silver Surfer",
+      "tmdbAnio": 2007,
+      "taquilla": 301913131,
+      "poster": "img/los-4-fantasticos-y-silver-surfer-2007.webp"
+    },
+    {
+      "es": "Cuatro Fantásticos",
+      "anio": 2015,
+      "tipo": "pelicula",
+      "tmdbId": 166424,
+      "tmdbTitulo": "Fantastic Four",
+      "tmdbAnio": 2015,
+      "taquilla": 167977596,
+      "poster": "img/cuatro-fantasticos-2015.webp"
+    },
+    {
+      "es": "Daredevil",
+      "anio": 2003,
+      "tipo": "pelicula",
+      "tmdbId": 9480,
+      "tmdbTitulo": "Daredevil",
+      "tmdbAnio": 2003,
+      "taquilla": 179179718,
+      "poster": "img/daredevil-2003.webp"
+    },
+    {
+      "es": "Elektra",
+      "anio": 2005,
+      "tipo": "pelicula",
+      "tmdbId": 9947,
+      "tmdbTitulo": "Elektra",
+      "tmdbAnio": 2005,
+      "taquilla": 56681566,
+      "poster": "img/elektra-2005.webp"
+    },
+    {
+      "es": "Spider-Man",
+      "anio": 2002,
+      "tipo": "pelicula",
+      "tmdbId": 557,
+      "tmdbTitulo": "Spider-Man",
+      "tmdbAnio": 2002,
+      "taquilla": 821708551,
+      "poster": "img/spider-man-2002.webp"
+    },
+    {
+      "es": "Spider-Man 2",
+      "anio": 2004,
+      "tipo": "pelicula",
+      "tmdbId": 558,
+      "tmdbTitulo": "Spider-Man 2",
+      "tmdbAnio": 2004,
+      "taquilla": 788976453,
+      "poster": "img/spider-man-2-2004.webp"
+    },
+    {
+      "es": "Spider-Man 3",
+      "anio": 2007,
+      "tipo": "pelicula",
+      "tmdbId": 559,
+      "tmdbTitulo": "Spider-Man 3",
+      "tmdbAnio": 2007,
+      "taquilla": 894983373,
+      "poster": "img/spider-man-3-2007.webp"
+    },
+    {
+      "es": "The Amazing Spider-Man",
+      "anio": 2012,
+      "tipo": "pelicula",
+      "tmdbId": 1930,
+      "tmdbTitulo": "The Amazing Spider-Man",
+      "tmdbAnio": 2012,
+      "taquilla": 758725893,
+      "poster": "img/the-amazing-spider-man-2012.webp"
+    },
+    {
+      "es": "The Amazing Spider-Man 2: El poder de Electro",
+      "anio": 2014,
+      "tipo": "pelicula",
+      "tmdbId": 102382,
+      "tmdbTitulo": "The Amazing Spider-Man 2",
+      "tmdbAnio": 2014,
+      "taquilla": 716934779,
+      "poster": "img/the-amazing-spider-man-2-el-poder-de-electro-2014.webp"
+    },
+    {
+      "es": "Spider-Man: Un nuevo universo",
+      "anio": 2018,
+      "tipo": "pelicula",
+      "tmdbId": 324857,
+      "tmdbTitulo": "Spider-Man: Into the Spider-Verse",
+      "tmdbAnio": 2018,
+      "taquilla": 394884133,
+      "poster": "img/spider-man-un-nuevo-universo-2018.webp"
+    },
+    {
+      "es": "Spider-Man: Cruzando el multiverso",
+      "anio": 2023,
+      "tipo": "pelicula",
+      "tmdbId": 569094,
+      "tmdbTitulo": "Spider-Man: Across the Spider-Verse",
+      "tmdbAnio": 2023,
+      "taquilla": 690897910,
+      "poster": "img/spider-man-cruzando-el-multiverso-2023.webp"
+    },
+    {
+      "es": "Venom",
+      "anio": 2018,
+      "tipo": "pelicula",
+      "tmdbId": 335983,
+      "tmdbTitulo": "Venom",
+      "tmdbAnio": 2018,
+      "taquilla": 856085151,
+      "poster": "img/venom-2018.webp"
+    },
+    {
+      "es": "Venom: Habrá matanza",
+      "anio": 2021,
+      "tipo": "pelicula",
+      "tmdbId": 580489,
+      "tmdbTitulo": "Venom: Let There Be Carnage",
+      "tmdbAnio": 2021,
+      "taquilla": 506863592,
+      "poster": "img/venom-habra-matanza-2021.webp"
+    },
+    {
+      "es": "Venom: El último baile",
+      "anio": 2024,
+      "tipo": "pelicula",
+      "tmdbId": 912649,
+      "tmdbTitulo": "Venom: The Last Dance",
+      "tmdbAnio": 2024,
+      "taquilla": 478937618,
+      "poster": "img/venom-el-ultimo-baile-2024.webp"
+    },
+    {
+      "es": "Morbius",
+      "anio": 2022,
+      "tipo": "pelicula",
+      "tmdbId": 526896,
+      "tmdbTitulo": "Morbius",
+      "tmdbAnio": 2022,
+      "taquilla": 167635712,
+      "poster": "img/morbius-2022.webp"
+    },
+    {
+      "es": "Madame Web",
+      "anio": 2024,
+      "tipo": "pelicula",
+      "tmdbId": 634492,
+      "tmdbTitulo": "Madame Web",
+      "tmdbAnio": 2024,
+      "taquilla": 100498764,
+      "poster": "img/madame-web-2024.webp"
+    },
+    {
+      "es": "Kraven el cazador",
+      "anio": 2024,
+      "tipo": "pelicula",
+      "tmdbId": 539972,
+      "tmdbTitulo": "Kraven the Hunter",
+      "tmdbAnio": 2024,
+      "taquilla": 62076533,
+      "poster": "img/kraven-el-cazador-2024.webp"
+    },
+    {
+      "es": "Howard, un nuevo héroe",
+      "anio": 1986,
+      "tipo": "pelicula",
+      "tmdbId": 10658,
+      "tmdbTitulo": "Howard the Duck",
+      "tmdbAnio": 1986,
+      "taquilla": 38000000,
+      "poster": "img/howard-un-nuevo-heroe-1986.webp"
+    },
+    {
+      "es": "Blade",
+      "anio": 1998,
+      "tipo": "pelicula",
+      "tmdbId": 36647,
+      "tmdbTitulo": "Blade",
+      "tmdbAnio": 1998,
+      "taquilla": 131183530,
+      "poster": "img/blade-1998.webp"
+    },
+    {
+      "es": "Blade II",
+      "anio": 2002,
+      "tipo": "pelicula",
+      "tmdbId": 36586,
+      "tmdbTitulo": "Blade II",
+      "tmdbAnio": 2002,
+      "taquilla": 155010032,
+      "poster": "img/blade-ii-2002.webp"
+    },
+    {
+      "es": "Blade: Trinity",
+      "anio": 2004,
+      "tipo": "pelicula",
+      "tmdbId": 36648,
+      "tmdbTitulo": "Blade: Trinity",
+      "tmdbAnio": 2004,
+      "taquilla": 128905366,
+      "poster": "img/blade-trinity-2004.webp"
+    },
+    {
+      "es": "Hulk",
+      "anio": 2003,
+      "tipo": "pelicula",
+      "tmdbId": 1927,
+      "tmdbTitulo": "Hulk",
+      "tmdbAnio": 2003,
+      "taquilla": 245360480,
+      "poster": "img/hulk-2003.webp"
+    },
+    {
+      "es": "El castigador",
+      "anio": 2004,
+      "tipo": "pelicula",
+      "tmdbId": 7220,
+      "tmdbTitulo": "The Punisher",
+      "tmdbAnio": 2004,
+      "taquilla": 54700105,
+      "poster": "img/el-castigador-2004.webp"
+    },
+    {
+      "es": "Punisher: Zona de guerra",
+      "anio": 2008,
+      "tipo": "pelicula",
+      "tmdbId": 13056,
+      "tmdbTitulo": "Punisher: War Zone",
+      "tmdbAnio": 2008,
+      "taquilla": 10089373,
+      "poster": "img/punisher-zona-de-guerra-2008.webp"
+    },
+    {
+      "es": "Ghost Rider: El motorista fantasma",
+      "anio": 2007,
+      "tipo": "pelicula",
+      "tmdbId": 1250,
+      "tmdbTitulo": "Ghost Rider",
+      "tmdbAnio": 2007,
+      "taquilla": 228738393,
+      "poster": "img/ghost-rider-el-motorista-fantasma-2007.webp"
+    },
+    {
+      "es": "Ghost Rider: Espíritu de venganza",
+      "anio": 2011,
+      "tipo": "pelicula",
+      "tmdbId": 71676,
+      "tmdbTitulo": "Ghost Rider: Spirit of Vengeance",
+      "tmdbAnio": 2011,
+      "taquilla": 132563930,
+      "poster": "img/ghost-rider-espiritu-de-venganza-2011.webp"
+    },
+    {
+      "es": "Daredevil",
+      "anio": 2015,
+      "tipo": "serie",
+      "tmdbId": 61889,
+      "tmdbTitulo": "Marvel's Daredevil",
+      "tmdbAnio": 2015,
+      "taquilla": null,
+      "poster": "img/daredevil-2015.webp"
+    },
+    {
+      "es": "Jessica Jones",
+      "anio": 2015,
+      "tipo": "serie",
+      "tmdbId": 38472,
+      "tmdbTitulo": "Marvel's Jessica Jones",
+      "tmdbAnio": 2015,
+      "taquilla": null,
+      "poster": "img/jessica-jones-2015.webp"
+    },
+    {
+      "es": "Luke Cage",
+      "anio": 2016,
+      "tipo": "serie",
+      "tmdbId": 62126,
+      "tmdbTitulo": "Marvel's Luke Cage",
+      "tmdbAnio": 2016,
+      "taquilla": null,
+      "poster": "img/luke-cage-2016.webp"
+    },
+    {
+      "es": "Iron Fist",
+      "anio": 2017,
+      "tipo": "serie",
+      "tmdbId": 62127,
+      "tmdbTitulo": "Marvel's Iron Fist",
+      "tmdbAnio": 2017,
+      "taquilla": null,
+      "poster": "img/iron-fist-2017.webp"
+    },
+    {
+      "es": "The Defenders",
+      "anio": 2017,
+      "tipo": "serie",
+      "tmdbId": 62285,
+      "tmdbTitulo": "Marvel's The Defenders",
+      "tmdbAnio": 2017,
+      "taquilla": null,
+      "poster": "img/the-defenders-2017.webp"
+    },
+    {
+      "es": "The Punisher",
+      "anio": 2017,
+      "tipo": "serie",
+      "tmdbId": 67178,
+      "tmdbTitulo": "Marvel's The Punisher",
+      "tmdbAnio": 2017,
+      "taquilla": null,
+      "poster": "img/the-punisher-2017.webp"
+    },
+    {
+      "es": "Bruja Escarlata y Visión",
+      "anio": 2021,
+      "tipo": "serie",
+      "tmdbId": 85271,
+      "tmdbTitulo": "WandaVision",
+      "tmdbAnio": 2021,
+      "taquilla": null,
+      "poster": "img/bruja-escarlata-y-vision-2021.webp"
+    },
+    {
+      "es": "Falcon y el Soldado de Invierno",
+      "anio": 2021,
+      "tipo": "serie",
+      "tmdbId": 88396,
+      "tmdbTitulo": "The Falcon and the Winter Soldier",
+      "tmdbAnio": 2021,
+      "taquilla": null,
+      "poster": "img/falcon-y-el-soldado-de-invierno-2021.webp"
+    },
+    {
+      "es": "Loki",
+      "anio": 2021,
+      "tipo": "serie",
+      "tmdbId": 84958,
+      "tmdbTitulo": "Loki",
+      "tmdbAnio": 2021,
+      "taquilla": null,
+      "poster": "img/loki-2021.webp"
+    },
+    {
+      "es": "¿Qué pasaría si...?",
+      "anio": 2021,
+      "tipo": "serie",
+      "tmdbId": 91363,
+      "tmdbTitulo": "What If...?",
+      "tmdbAnio": 2021,
+      "taquilla": null,
+      "poster": "img/que-pasaria-si-2021.webp"
+    },
+    {
+      "es": "Ojo de Halcón",
+      "anio": 2021,
+      "tipo": "serie",
+      "tmdbId": 88329,
+      "tmdbTitulo": "Hawkeye",
+      "tmdbAnio": 2021,
+      "taquilla": null,
+      "poster": "img/ojo-de-halcon-2021.webp"
+    },
+    {
+      "es": "Caballero Luna",
+      "anio": 2022,
+      "tipo": "serie",
+      "tmdbId": 92749,
+      "tmdbTitulo": "Moon Knight",
+      "tmdbAnio": 2022,
+      "taquilla": null,
+      "poster": "img/caballero-luna-2022.webp"
+    },
+    {
+      "es": "Ms. Marvel",
+      "anio": 2022,
+      "tipo": "serie",
+      "tmdbId": 92782,
+      "tmdbTitulo": "Ms. Marvel",
+      "tmdbAnio": 2022,
+      "taquilla": null,
+      "poster": "img/ms-marvel-2022.webp"
+    },
+    {
+      "es": "She-Hulk: Abogada Hulka",
+      "anio": 2022,
+      "tipo": "serie",
+      "tmdbId": 92783,
+      "tmdbTitulo": "She-Hulk: Attorney at Law",
+      "tmdbAnio": 2022,
+      "taquilla": null,
+      "poster": "img/she-hulk-abogada-hulka-2022.webp"
+    },
+    {
+      "es": "Secret Invasion",
+      "anio": 2023,
+      "tipo": "serie",
+      "tmdbId": 114472,
+      "tmdbTitulo": "Secret Invasion",
+      "tmdbAnio": 2023,
+      "taquilla": null,
+      "poster": "img/secret-invasion-2023.webp"
+    },
+    {
+      "es": "Echo",
+      "anio": 2024,
+      "tipo": "serie",
+      "tmdbId": 122226,
+      "tmdbTitulo": "Echo",
+      "tmdbAnio": 2024,
+      "taquilla": null,
+      "poster": "img/echo-2024.webp"
+    },
+    {
+      "es": "X-Men 97",
+      "anio": 2024,
+      "tipo": "serie",
+      "tmdbId": 138502,
+      "tmdbTitulo": "X-Men '97",
+      "tmdbAnio": 2024,
+      "taquilla": null,
+      "poster": "img/x-men-97-2024.webp"
+    },
+    {
+      "es": "Agatha, ¿quién si no?",
+      "anio": 2024,
+      "tipo": "serie",
+      "tmdbId": 138501,
+      "tmdbTitulo": "Agatha All Along",
+      "tmdbAnio": 2024,
+      "taquilla": null,
+      "poster": "img/agatha-quien-si-no-2024.webp"
+    },
+    {
+      "es": "Daredevil: Born Again",
+      "anio": 2025,
+      "tipo": "serie",
+      "tmdbId": 202555,
+      "tmdbTitulo": "Daredevil: Born Again",
+      "tmdbAnio": 2025,
+      "taquilla": null,
+      "poster": "img/daredevil-born-again-2025.webp"
+    },
+    {
+      "es": "Ironheart",
+      "anio": 2025,
+      "tipo": "serie",
+      "tmdbId": 114471,
+      "tmdbTitulo": "Ironheart",
+      "tmdbAnio": 2025,
+      "taquilla": null,
+      "poster": "img/ironheart-2025.webp"
+    },
+    {
+      "es": "Marvel Agents of S.H.I.E.L.D.",
+      "anio": 2013,
+      "tipo": "serie",
+      "tmdbId": 1403,
+      "tmdbTitulo": "Marvel's Agents of S.H.I.E.L.D.",
+      "tmdbAnio": 2013,
+      "taquilla": null,
+      "poster": "img/marvel-agents-of-s-h-i-e-l-d-2013.webp"
+    },
+    {
+      "es": "Agente Carter",
+      "anio": 2015,
+      "tipo": "serie",
+      "tmdbId": 61550,
+      "tmdbTitulo": "Marvel's Agent Carter",
+      "tmdbAnio": 2015,
+      "taquilla": null,
+      "poster": "img/agente-carter-2015.webp"
+    },
+    {
+      "es": "Inhumans",
+      "anio": 2017,
+      "tipo": "serie",
+      "tmdbId": 68716,
+      "tmdbTitulo": "Marvel's Inhumans",
+      "tmdbAnio": 2017,
+      "taquilla": null,
+      "poster": "img/inhumans-2017.webp"
+    },
+    {
+      "es": "Legión",
+      "anio": 2017,
+      "tipo": "serie",
+      "tmdbId": 67195,
+      "tmdbTitulo": "Legion",
+      "tmdbAnio": 2017,
+      "taquilla": null,
+      "poster": "img/legion-2017.webp"
+    },
+    {
+      "es": "Runaways",
+      "anio": 2017,
+      "tipo": "serie",
+      "tmdbId": 67466,
+      "tmdbTitulo": "Marvel's Runaways",
+      "tmdbAnio": 2017,
+      "taquilla": null,
+      "poster": "img/runaways-2017.webp"
+    },
+    {
+      "es": "Cloak & Dagger",
+      "anio": 2018,
+      "tipo": "serie",
+      "tmdbId": 66190,
+      "tmdbTitulo": "Marvel's Cloak & Dagger",
+      "tmdbAnio": 2018,
+      "taquilla": null,
+      "poster": "img/cloak-dagger-2018.webp"
+    },
+    {
+      "es": "The Gifted",
+      "anio": 2017,
+      "tipo": "serie",
+      "tmdbId": 69629,
+      "tmdbTitulo": "The Gifted",
+      "tmdbAnio": 2017,
+      "taquilla": null,
+      "poster": "img/the-gifted-2017.webp"
+    }
+  ],
+  "fallos": []
+}

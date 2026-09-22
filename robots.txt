@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /herramientas/
+
+Sitemap: https://mangel-creator.github.io/marvel-higher-or-lower/sitemap.xml

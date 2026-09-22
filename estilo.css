@@ -1,0 +1,655 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   Marvel: Más o Menos
+   Paleta y escalas según BRIEF.md. Todo con tokens: para cambiar el tono de
+   la web se tocan estas variables, no los componentes.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root{
+  color-scheme:dark;   /* barras de desplazamiento y controles en oscuro */
+
+  /* Color. Neutros con croma bajo en el tono del acento: nada de gris puro. */
+  --fondo:       oklch(.155 .008 25);
+  --fondo-hondo: oklch(.115 .006 25);
+  --superficie:  oklch(.215 .012 25);
+  --borde:       oklch(1 0 0 / .14);
+  --borde-vivo:  oklch(1 0 0 / .34);
+  --texto:       oklch(.945 .016 85);
+  --texto-suave: oklch(.755 .014 60);
+  --acento:      oklch(.55 .21 28);
+  --acento-alto: oklch(.63 .22 29);
+  --acierto:     oklch(.76 .17 148);
+
+  /* Tipografía: escala modular de razón 1.333 */
+  --t-xs:.75rem; --t-sm:.875rem; --t-base:1rem; --t-lg:1.125rem;
+  --t-xl:1.5rem; --t-2xl:2rem; --t-3xl:2.667rem; --t-4xl:3.556rem;
+
+  --display:'Archivo', 'Arial Narrow', system-ui, sans-serif;
+  --texto-fuente:'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Espacio: múltiplos de 4 */
+  --e1:.25rem; --e2:.5rem; --e3:.75rem; --e4:1rem;
+  --e6:1.5rem; --e8:2rem; --e12:3rem; --e16:4rem;
+
+  --radio:10px;
+
+  /* Curvas y duraciones */
+  --sale:cubic-bezier(.23,1,.32,1);
+  --mueve:cubic-bezier(.77,0,.175,1);
+  --panel-curva:cubic-bezier(.32,.72,0,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html,body{height:100%}
+
+body{
+  margin:0;
+  background:var(--fondo);
+  color:var(--texto);
+  font-family:var(--texto-fuente);
+  font-size:var(--t-base);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow:hidden;
+  overscroll-behavior:none;
+}
+
+h1,h2,h3{margin:0;font-family:var(--display);line-height:1.05;letter-spacing:-.02em}
+p{margin:0}
+
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--acento-alto)}
+
+:focus-visible{
+  outline:3px solid var(--acento-alto);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+[hidden]{display:none!important}
+
+/* ── Piezas compartidas ─────────────────────────────────────────────── */
+
+.sobretitulo{
+  font-family:var(--display);
+  font-size:var(--t-sm);
+  font-weight:700;
+  font-stretch:88%;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--acento-alto);
+}
+
+.jugar{
+  font-family:var(--display);
+  font-size:var(--t-xl);
+  font-weight:800;
+  font-stretch:82%;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--fondo-hondo);
+  background:var(--texto);
+  border:none;
+  border-radius:var(--radio);
+  padding:var(--e4) var(--e12);
+  min-height:56px;
+  cursor:pointer;
+  transition:transform .14s var(--sale), background-color .14s var(--sale);
+}
+.jugar:hover{background:#fff}
+.jugar:active{transform:scale(.97)}
+.jugar:disabled{
+  background:var(--superficie);
+  color:var(--texto-suave);
+  cursor:not-allowed;
+}
+.jugar:disabled:hover{background:var(--superficie)}
+
+.secundario{
+  font-family:var(--texto-fuente);
+  font-size:var(--t-sm);
+  font-weight:600;
+  color:var(--texto-suave);
+  background:none;
+  border:1px solid var(--borde);
+  border-radius:var(--radio);
+  padding:var(--e3) var(--e6);
+  min-height:44px;
+  cursor:pointer;
+  transition:color .14s var(--sale), border-color .14s var(--sale);
+}
+.secundario:hover{color:var(--texto);border-color:var(--borde-vivo)}
+
+/* ══ Portada ════════════════════════════════════════════════════════════
+   Retícula asimétrica: el bloque de texto manda y los modos van debajo,
+   desplazados. Nada de caja centrada con todo apilado al medio.          */
+
+.portada{
+  position:fixed;
+  inset:0;
+  overflow-y:auto;
+  background:
+    radial-gradient(ellipse 80% 60% at 78% 8%, oklch(.55 .21 28 / .20), transparent 62%),
+    var(--fondo-hondo);
+}
+
+.portada__caja{
+  max-width:1180px;
+  margin:0 auto;
+  padding:clamp(2.5rem,7vh,5rem) var(--e6) var(--e12);
+  display:grid;
+  gap:clamp(2.5rem,6vh,4.5rem);
+  min-height:100%;
+  align-content:center;
+}
+
+/* En pantalla ancha, el texto y la elección de modo van en dos columnas
+   desiguales. Todo apilado en una columna deja media pantalla muerta. */
+@media (min-width:1000px){
+  .portada__caja{
+    grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+    column-gap:clamp(3rem,6vw,6rem);
+    align-items:center;
+  }
+  .modos{align-self:center}
+  .creditos{grid-column:1 / -1}
+}
+
+.portada__cabecera{max-width:34ch}
+
+.portada__titulo{
+  margin:var(--e4) 0 var(--e6);
+  display:grid;
+  text-transform:uppercase;
+}
+.portada__titulo span{
+  font-size:clamp(3.2rem,13vw,7rem);
+  font-weight:900;
+  font-stretch:70%;
+  letter-spacing:-.035em;
+  color:var(--acento);
+  line-height:.86;
+}
+.portada__titulo em{
+  font-style:normal;
+  font-size:clamp(2.1rem,8vw,4.2rem);
+  font-weight:500;
+  font-stretch:108%;
+  letter-spacing:.01em;
+  line-height:1;
+  color:var(--texto);
+}
+
+.portada__entradilla{
+  max-width:46ch;
+  font-size:var(--t-lg);
+  color:var(--texto-suave);
+}
+.portada__entradilla strong{color:var(--texto);font-weight:600}
+
+.modos{max-width:760px}
+.modos__titulo{
+  font-size:var(--t-sm);
+  font-weight:700;
+  font-stretch:90%;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--texto-suave);
+  margin-bottom:var(--e4);
+}
+
+.modos__lista{
+  display:grid;
+  gap:var(--e3);
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
+  margin-bottom:var(--e8);
+}
+
+.modo{
+  display:grid;
+  gap:var(--e1);
+  text-align:left;
+  padding:var(--e4) var(--e6);
+  min-height:44px;
+  background:var(--superficie);
+  border:1px solid var(--borde);
+  border-left:3px solid transparent;
+  border-radius:var(--radio);
+  color:var(--texto-suave);
+  font-family:inherit;
+  cursor:pointer;
+  transition:border-color .16s var(--sale), background-color .16s var(--sale), color .16s var(--sale);
+}
+.modo:hover{border-color:var(--borde-vivo)}
+.modo[aria-checked="true"]{
+  border-left-color:var(--acento);
+  background:oklch(.55 .21 28 / .13);
+  color:var(--texto);
+}
+.modo__nombre{font-family:var(--display);font-size:var(--t-lg);font-weight:700;font-stretch:92%;color:var(--texto)}
+.modo__desc{font-size:var(--t-sm);line-height:1.45}
+.modo__record{font-size:var(--t-xs);color:var(--acento-alto);font-weight:600}
+.modo__record:empty{display:none}
+
+.portada__aviso{
+  margin-top:var(--e4);
+  font-size:var(--t-sm);
+  color:var(--texto-suave);
+  min-height:1.5em;
+}
+
+.creditos{
+  font-size:var(--t-xs);
+  line-height:1.6;
+  color:var(--texto-suave);
+  max-width:62ch;
+  border-top:1px solid var(--borde);
+  padding-top:var(--e4);
+  display:grid;
+  gap:var(--e2);
+}
+.creditos__legal{opacity:.78}
+
+/* ══ Tablero ═══════════════════════════════════════════════════════════
+   Carril de tres huecos que se desliza un hueco por acierto. En escritorio
+   se mueve en horizontal; en móvil, en vertical.                         */
+
+.juego{position:fixed;inset:0}
+
+.tablero{position:absolute;inset:0;overflow:hidden;background:var(--fondo-hondo)}
+
+.carril{
+  display:flex;
+  width:150%;
+  height:100%;
+  transform:translate3d(0,0,0);
+}
+.carril--anda{
+  transform:translate3d(-33.3333%,0,0);
+  transition:transform .48s var(--panel-curva);
+}
+
+.panel{
+  position:relative;
+  flex:0 0 33.3333%;
+  min-width:0;
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+  isolation:isolate;
+}
+.panel + .panel{box-shadow:-1px 0 0 var(--borde-vivo)}
+
+/* El póster es ambiente, no contenido. Va desenfocado y apagado, pero eso se
+   hace al descargarlo (herramientas/tmdb.js), no aquí: si se tocan estos
+   valores hay que borrar img/ y volver a pasar el script. */
+.panel__fondo{
+  position:absolute;
+  inset:-4%;
+  background-size:cover;
+  background-position:center 25%;
+  z-index:-2;
+  transform:scale(1.04);
+}
+/* Sin póster: trama diagonal con el color del estudio, no un hueco vacío */
+.panel--sinposter .panel__fondo{
+  background:
+    repeating-linear-gradient(135deg, oklch(1 0 0 / .035) 0 2px, transparent 2px 9px),
+    var(--tono-estudio, var(--superficie));
+}
+
+.panel__velo{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    radial-gradient(ellipse 90% 70% at 50% 45%, transparent 0%, oklch(.115 .006 25 / .45) 100%),
+    linear-gradient(to bottom, oklch(.115 .006 25 / .52) 0%, oklch(.115 .006 25 / .74) 48%, oklch(.115 .006 25 / .92) 100%);
+}
+
+/* Dos mitades: el título crece hacia arriba desde la línea media y el dato
+   arranca siempre en esa misma línea. Así los dos paneles cuadran aunque uno
+   se llame «Shang-Chi y la leyenda de los Diez Anillos» y el otro «Thor». */
+.panel__cuerpo{
+  width:min(100%,32rem);
+  height:100%;
+  padding:clamp(3.5rem,7vh,5rem) clamp(1.25rem,3.5vw,2.5rem) clamp(1.25rem,3vh,2.5rem);
+  text-align:center;
+  display:grid;
+  grid-template-rows:minmax(0,1fr) minmax(0,1fr);
+  justify-items:center;
+  /* Seguro contra un póster con una zona clara justo detrás del texto */
+  text-shadow:0 1px 14px oklch(.115 .006 25 / .92);
+}
+
+.panel__cabeza{
+  align-self:end;
+  display:grid;
+  gap:var(--e2);
+  justify-items:center;
+  padding-bottom:var(--e4);
+}
+
+.panel__meta{
+  font-family:var(--display);
+  font-size:var(--t-xs);
+  font-weight:700;
+  font-stretch:90%;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--texto-suave);
+}
+
+.panel__titulo{
+  font-size:clamp(1.75rem,4.2vw,3.2rem);
+  font-weight:800;
+  font-stretch:74%;
+  text-transform:uppercase;
+  text-wrap:balance;
+  max-width:16ch;
+}
+
+.panel__dato{align-self:start;display:grid;gap:var(--e2);justify-items:center}
+
+.dato__cifra{
+  font-family:var(--display);
+  font-size:clamp(3.4rem,10vw,7rem);
+  font-weight:900;
+  font-stretch:84%;
+  letter-spacing:-.03em;
+  line-height:.95;
+  font-variant-numeric:tabular-nums;
+}
+/* «2.799 M$» ocupa el triple que «7,3»: no pueden compartir tamaño. */
+[data-modo="taquilla"] .dato__cifra{
+  font-size:clamp(2.5rem,6.4vw,4.75rem);
+  letter-spacing:-.02em;
+}
+
+.dato__pie{
+  font-size:var(--t-sm);
+  color:var(--texto-suave);
+  max-width:24ch;
+}
+.dato__pregunta{
+  font-size:var(--t-base);
+  color:var(--texto-suave);
+  max-width:26ch;
+}
+
+.opciones{display:grid;gap:var(--e3);width:min(100%,17rem);margin-top:var(--e2)}
+
+.opcion{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:var(--e3);
+  width:100%;
+  min-height:52px;
+  padding:var(--e3) var(--e6);
+  font-family:var(--display);
+  font-size:var(--t-lg);
+  font-weight:800;
+  font-stretch:84%;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--texto);
+  background:oklch(.145 .006 25 / .6);
+  border:1.5px solid var(--borde-vivo);
+  border-radius:var(--radio);
+  cursor:pointer;
+  transition:color .14s var(--sale), background-color .14s var(--sale), transform .14s var(--sale);
+}
+.opcion:hover{background:var(--texto);color:var(--fondo-hondo)}
+.opcion:active{transform:scale(.97)}
+.opcion svg{flex:0 0 auto}
+
+/* Estados del panel: quién enseña el dato y quién pregunta */
+.panel[data-estado="pregunta"] .dato__cifra,
+.panel[data-estado="pregunta"] .dato__pie{display:none}
+.panel[data-estado="revelado"] .dato__pregunta,
+.panel[data-estado="revelado"] .opciones{display:none}
+
+/* Veredicto: sello que cae sobre el panel resuelto */
+/* Arriba del todo, no encima del dato: el número es lo que hay que leer. */
+.panel__sello{
+  position:absolute;
+  top:clamp(3.25rem,11%,6rem);
+  left:50%;
+  translate:-50% 0;
+  z-index:2;
+  pointer-events:none;
+  opacity:0;
+  line-height:0;
+}
+.panel__sello svg{
+  width:clamp(3rem,5vw,4.25rem);
+  height:auto;
+  filter:drop-shadow(0 2px 14px oklch(.115 .006 25 / .8));
+}
+.panel[data-veredicto] .panel__sello{
+  opacity:1;
+  animation:sello .34s var(--sale) both;
+}
+.panel[data-veredicto="bien"] .panel__sello{color:var(--acierto)}
+.panel[data-veredicto="mal"] .panel__sello{color:var(--acento-alto)}
+.panel[data-veredicto="mal"] .panel__velo{
+  background:linear-gradient(to bottom, oklch(.55 .21 28 / .40), oklch(.20 .12 28 / .85));
+}
+.panel[data-veredicto="bien"] .panel__velo{
+  background:linear-gradient(to bottom, oklch(.40 .13 148 / .30), oklch(.16 .04 148 / .86));
+}
+
+@keyframes sello{
+  from{opacity:0;transform:scale(1.35) rotate(-8deg)}
+  to  {opacity:1;transform:scale(1) rotate(-5deg)}
+}
+
+/* Sacudida al fallar */
+.juego--falla .tablero{animation:sacude .3s var(--mueve) both}
+@keyframes sacude{
+  0%,100%{transform:translate3d(0,0,0)}
+  22%{transform:translate3d(-9px,0,0)}
+  48%{transform:translate3d(7px,0,0)}
+  74%{transform:translate3d(-4px,0,0)}
+}
+
+/* Pivote central */
+.pivote{
+  position:absolute;
+  top:50%;left:50%;
+  translate:-50% -50%;
+  z-index:3;
+  width:clamp(3rem,6vw,3.75rem);
+  aspect-ratio:1;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--fondo-hondo);
+  border:1.5px solid var(--borde-vivo);
+  font-family:var(--display);
+  font-size:var(--t-sm);
+  font-weight:800;
+  font-stretch:86%;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--texto-suave);
+}
+
+/* Barra superior */
+.barra{
+  position:absolute;
+  top:0;left:0;right:0;
+  z-index:4;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--e4);
+  padding:max(var(--e3),env(safe-area-inset-top)) var(--e4) var(--e3);
+  background:linear-gradient(to bottom, oklch(.115 .006 25 / .85), transparent);
+  pointer-events:none;
+}
+.barra > *{pointer-events:auto}
+
+.barra__salir{
+  display:inline-flex;
+  align-items:center;
+  gap:var(--e1);
+  min-height:44px;
+  padding:var(--e2) var(--e3);
+  background:none;
+  border:none;
+  border-radius:var(--radio);
+  color:var(--texto-suave);
+  font-family:inherit;
+  font-size:var(--t-sm);
+  font-weight:600;
+  cursor:pointer;
+  transition:color .14s var(--sale);
+}
+.barra__salir:hover{color:var(--texto)}
+
+.barra__modo{
+  font-family:var(--display);
+  font-size:var(--t-xs);
+  font-weight:700;
+  font-stretch:88%;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--texto-suave);
+  text-align:center;
+}
+
+.barra__racha{display:flex;align-items:baseline;gap:var(--e2);min-height:44px;align-content:center;flex-wrap:wrap}
+.barra__cifra{
+  font-family:var(--display);
+  font-size:var(--t-xl);
+  font-weight:900;
+  font-stretch:84%;
+  font-variant-numeric:tabular-nums;
+  line-height:1.2;
+  color:var(--texto);
+}
+.barra__cifra--sube{animation:latido .36s var(--sale) both;color:var(--acierto)}
+@keyframes latido{
+  0%{transform:scale(1)}
+  40%{transform:scale(1.28)}
+  100%{transform:scale(1)}
+}
+.barra__etiqueta{font-size:var(--t-xs);color:var(--texto-suave);text-transform:uppercase;letter-spacing:.1em}
+
+.anuncio{
+  position:absolute;
+  width:1px;height:1px;
+  overflow:hidden;
+  clip-path:inset(50%);
+  white-space:nowrap;
+}
+
+/* ══ Fin de partida ═════════════════════════════════════════════════════ */
+
+.final{
+  position:fixed;
+  inset:0;
+  z-index:6;
+  display:grid;
+  place-items:center;
+  padding:var(--e6);
+  overflow-y:auto;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 12%, oklch(.55 .21 28 / .22), transparent 60%),
+    var(--fondo-hondo);
+  animation:asoma .28s var(--sale) both;
+}
+@keyframes asoma{from{opacity:0}to{opacity:1}}
+
+.final__caja{
+  text-align:center;
+  display:grid;
+  gap:var(--e3);
+  justify-items:center;
+  max-width:44ch;
+}
+.final__cifra{
+  font-family:var(--display);
+  font-size:clamp(5rem,20vw,11rem);
+  font-weight:900;
+  font-stretch:78%;
+  letter-spacing:-.04em;
+  line-height:.85;
+  font-variant-numeric:tabular-nums;
+}
+.final__unidad{
+  font-family:var(--display);
+  font-size:var(--t-lg);
+  font-weight:700;
+  font-stretch:90%;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--texto-suave);
+}
+.final__detalle{color:var(--texto-suave);font-size:var(--t-sm);margin-top:var(--e2);text-wrap:balance}
+.final__detalle strong{color:var(--texto);font-weight:600}
+.final__record{font-size:var(--t-sm);color:var(--acento-alto);font-weight:600;min-height:1.5em}
+.final__botones{
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--e3);
+  justify-content:center;
+  margin-top:var(--e4);
+}
+
+/* ══ Móvil: el carril se parte en horizontal ═══════════════════════════ */
+
+@media (max-width:860px){
+  .carril{flex-direction:column;width:100%;height:150%}
+  .carril--anda{transform:translate3d(0,-33.3333%,0)}
+  .panel + .panel{box-shadow:0 -1px 0 var(--borde-vivo)}
+  .panel__fondo{background-position:center 30%}
+  .opciones{grid-template-columns:1fr 1fr;width:min(100%,21rem)}
+  .opcion{padding:var(--e3) var(--e2);font-size:var(--t-base);gap:var(--e2)}
+  .barra{padding-top:max(var(--e2),env(safe-area-inset-top))}
+  .barra__racha{flex-wrap:nowrap}
+
+  /* Apilados uno encima de otro ya no hay nada que cuadrar entre mitades, y
+     la retícula rígida solo dejaría huecos. Bloque centrado y a correr. */
+  .panel__cuerpo{
+    grid-template-rows:auto;
+    align-content:center;
+    gap:var(--e3);
+    padding-block:clamp(2.5rem,6vh,3.5rem) var(--e4);
+  }
+  .panel__cabeza{align-self:auto;padding-bottom:0}
+  .panel__dato{align-self:auto}
+}
+
+/* El nombre del modo ya lo dice el pie de cada panel: en pantalla estrecha
+   sobra y se come la altura del título. */
+@media (max-width:700px){
+  .barra__modo{display:none}
+}
+
+@media (max-width:420px){
+  .panel__titulo{font-size:clamp(1.5rem,7vw,2rem)}
+  .dato__cifra{font-size:clamp(2.8rem,15vw,4rem)}
+  [data-modo="taquilla"] .dato__cifra{font-size:clamp(2rem,9.5vw,2.75rem)}
+  .portada__caja{padding-left:var(--e4);padding-right:var(--e4)}
+}
+
+/* Pantallas bajas y anchas: que no se coma el dato */
+@media (max-height:560px) and (min-width:861px){
+  .panel__titulo{font-size:clamp(1.4rem,3vw,2rem)}
+  .dato__cifra{font-size:clamp(2.5rem,6vw,4rem)}
+}
+
+/* ══ Movimiento reducido ═══════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+    scroll-behavior:auto!important;
+  }
+  .panel[data-veredicto] .panel__sello{opacity:1}
+}

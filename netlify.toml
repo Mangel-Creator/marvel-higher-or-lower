@@ -1,0 +1,27 @@
+[build]
+  publish = "."
+
+# Los datos y los pósters van congelados: se pueden cachear a lo bruto.
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/datos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# Los scripts de extracción no pintan nada servidos por web. `force` es
+# necesario: sin él Netlify sirve el archivo y la redirección no llega a actuar.
+[[redirects]]
+  from = "/herramientas/*"
+  to = "/"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/datos/_log-*"
+  to = "/"
+  status = 404
+  force = true
