@@ -10,9 +10,9 @@ const sinMovimiento = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const MODOS = {
   nota: {
-    nombre: 'Nota de FilmAffinity',
+    nombre: 'Nota de TMDB',
     campo: 'nota',
-    unidad: 'nota media en FilmAffinity',
+    unidad: 'nota media en TMDB',
     pregunta: t => `¿tiene más o menos nota que <em>${t}</em>?`,
     formato: v => v.toFixed(1).replace('.', ','),
     sirve: t => typeof t.nota === 'number'

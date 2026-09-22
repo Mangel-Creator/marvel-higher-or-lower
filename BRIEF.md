@@ -16,7 +16,7 @@ mejor valoradas. Es un juego de sobremesa, no un producto.
 
 | Modo | Dato comparado | Catálogo |
 |---|---|---|
-| **Nota FilmAffinity** | Nota media sobre 10 | Películas + series |
+| **Nota TMDB** | Nota media sobre 10 | Películas + series |
 | **Taquilla mundial** | Recaudación bruta mundial en dólares | Solo películas |
 
 Las series no tienen taquilla, así que quedan fuera del segundo modo. El menú
@@ -29,11 +29,10 @@ Lower* y los botones son **HIGHER / LOWER**, porque así es como se conoce el
 formato. Las películas salen con su **título original en inglés** (*Avengers:
 Endgame*, no *Vengadores: Endgame*), y los pósters se descargan también en
 inglés para que no choquen con el título. Todo lo demás —explicaciones, pie,
-pantalla de fin— va en español, que es el idioma de quien va a jugar y el de
-FilmAffinity, de donde salen las notas.
+pantalla de fin— va en español, que es el idioma de quien va a jugar.
 
-El título en español se guarda igualmente en los datos: es con el que se busca
-en FilmAffinity y permite rastrear de dónde salió cada nota.
+El título en español se guarda igualmente en los datos: es la clave con la que
+los scripts buscan cada ficha y permite rastrear de dónde salió cada dato.
 
 ## Catálogo
 
@@ -45,16 +44,32 @@ Todo Marvel en pantalla, sin filtrar por calidad ni por estudio:
 - **Antiguas y sueltas**: *Blade*, *Hulk* (2003), *Daredevil*, *Elektra*, *Punisher*, *Ghost Rider*, *Howard el Pato*.
 - **Series**: Netflix (*Daredevil*, *Jessica Jones*, *Luke Cage*, *Iron Fist*, *The Punisher*, *The Defenders*), Disney+ (*WandaVision*, *Falcon y el Soldado de Invierno*, *Loki*, *Ojo de Halcón*, *Ms. Marvel*, *Moon Knight*, *Caballero Luna*, *She-Hulk*, *Secret Invasion*, *Echo*, *Agatha*, *¿Qué pasaría si...?*), y *Agents of S.H.I.E.L.D.*
 
-Objetivo: entre 80 y 100 títulos. El rango amplio de notas (de ~3,5 a ~7,5) es
-lo que hace jugable el modo nota.
+Resultado: **105 títulos**, 27 de ellos series. El rango amplio de notas es lo
+que hace jugable el modo nota.
 
 ## Datos
 
 | Dato | Origen |
 |---|---|
-| Nota media y nº de votos | **FilmAffinity**, extraído título a título |
-| Recaudación mundial | **TMDB** (campo `revenue`) |
+| Nota media y nº de votos | **TMDB** (`vote_average`, `vote_count`) |
+| Recaudación mundial | **TMDB** (`revenue`) |
 | Póster, año, título original | **TMDB** |
+
+**Por qué no FilmAffinity, que era el plan.** Su ficha trae la nota en
+microdatos y la extracción funciona, pero limita las peticiones y acabó
+devolviendo `429` durante más de hora y media seguida, con 57 de 105 títulos
+sacados. El script (`herramientas/filmaffinity.js`) se queda en el repositorio
+y funciona; simplemente no se puede depender de él.
+
+**Todas las notas salen de la misma fuente, sin excepción.** Se podría haber
+publicado con 57 notas de FilmAffinity y 48 de TMDB, pero entonces el juego
+estaría comparando escalas distintas — el público español puntúa bastante más
+bajo que el internacional — y cada ronda mezclada sería mentira. Las notas de
+FilmAffinity que sí se extrajeron se guardan en el campo `notaFa` por si algún
+día se puede completar la tabla y volver a cambiar la fuente entera.
+
+Con TMDB el reparto va de **4,4** (*Fantastic Four*, 2015) a **8,7**
+(*X-Men '97*), con forma de campana. Da juego.
 
 Los datos se congelan en un `peliculas.json` dentro del proyecto, con la fecha
 de extracción visible en el pie de la web. Nada se pide en tiempo de ejecución:
@@ -63,11 +78,6 @@ la web publicada no llama a ninguna API.
 Los pósters se descargan una sola vez, se convierten a **WebP** y se guardan en
 `img/`. La clave de TMDB se lee de la variable de entorno `TMDB_API_KEY` y no
 se escribe en ningún archivo del proyecto.
-
-**Comprobado antes de escribir esto**: la ficha de FilmAffinity trae la nota y
-el número de votos en microdatos (`ratingValue`, `ratingCount`) y responde a una
-petición normal — *Logan* da 6,9 con 38.790 votos. La extracción es viable
-título a título, con pausa entre peticiones para no castigar el servidor.
 
 ## Dirección visual
 
@@ -153,6 +163,6 @@ por si se cambia más adelante.
 
 ## Atribución
 
-Pósters y datos de taquilla: **The Movie Database (TMDB)**. Aviso obligatorio en
+Notas, taquilla y pósters: **The Movie Database (TMDB)**. Aviso obligatorio en
 el pie: *"Este producto usa la API de TMDB pero no está avalado ni certificado
-por TMDB."* Notas y votos: **FilmAffinity**. Proyecto de fans sin ánimo de lucro.
+por TMDB."* Proyecto de fans sin ánimo de lucro y sin relación con Marvel ni Disney.

@@ -2,7 +2,7 @@
 
 Juego tipo *Higher or Lower* con el cine y la televisión de Marvel. Dos títulos
 a pantalla partida: del primero ves el dato, del segundo tienes que adivinar si
-tiene más o menos. Dos modos: **nota de FilmAffinity** y **taquilla mundial**.
+tiene más o menos. Dos modos: **nota de TMDB** y **taquilla mundial**.
 
 Las decisiones de diseño están en [BRIEF.md](BRIEF.md).
 
@@ -35,7 +35,8 @@ ninguna API. Para actualizarlos, tres pasos en orden:
 node herramientas/filmaffinity.js
 ```
 
-Nota media y número de votos, título a título. Tarda unos diez minutos a
+Fuente original de las notas, hoy no usada: ver BRIEF. Saca nota y votos de
+FilmAffinity, título a título. Tarda unos diez minutos a
 propósito: hay una pausa de 2,5 s entre peticiones y, si FilmAffinity responde
 429, espera cinco minutos antes de insistir. **No lo lances varias veces
 seguidas**: acaban bloqueándote media hora. Lo ya descargado queda en
@@ -103,7 +104,6 @@ lo ignora.
 
 ## Créditos
 
-Notas y votos de [FilmAffinity](https://www.filmaffinity.com). Pósters y
-taquilla de [TMDB](https://www.themoviedb.org) — este producto usa la API de
+Notas, taquilla y pósters de [TMDB](https://www.themoviedb.org) — este producto usa la API de
 TMDB pero no está avalado ni certificado por TMDB. Proyecto de fans, sin ánimo
 de lucro y sin relación con Marvel ni Disney.

@@ -129,10 +129,19 @@ async function main() {
       continue;
     }
 
+    // La nota sale de la ficha completa cuando la hay (más fiable que la del
+    // listado de búsqueda), y si no, del propio resultado de la búsqueda.
     let taquilla = null;
+    let nota = elegido.vote_average;
+    let votos = elegido.vote_count;
+
     if (!serie) {
       const ficha = await api('/movie/' + elegido.id);
-      taquilla = ficha && ficha.revenue ? ficha.revenue : null;
+      if (ficha) {
+        taquilla = ficha.revenue || null;
+        if (typeof ficha.vote_average === 'number') nota = ficha.vote_average;
+        if (typeof ficha.vote_count === 'number') votos = ficha.vote_count;
+      }
     }
 
     const archivo = await poster(elegido.poster_path, babel(t.es) + '-' + t.anio);
@@ -142,11 +151,14 @@ async function main() {
       tmdbId: elegido.id,
       tmdbTitulo: elegido.title || elegido.name,
       tmdbAnio: Number((elegido.release_date || elegido.first_air_date || '').slice(0, 4)) || null,
+      nota: typeof nota === 'number' && nota > 0 ? Math.round(nota * 10) / 10 : null,
+      votos: votos || null,
       taquilla,
       poster: archivo
     });
 
     console.log(`${etiqueta}  ✓ ${elegido.title || elegido.name}` +
+      `  nota ${nota ? nota.toFixed(1) : '—'}` +
       (taquilla ? `  ${Math.round(taquilla / 1e6)} M$` : '') +
       (archivo ? '  [póster]' : '  [sin póster]'));
 
