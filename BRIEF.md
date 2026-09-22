@@ -143,7 +143,13 @@ HTML + CSS + JavaScript sin framework ni build. Un `index.html`, un `estilo.css`
 un `juego.js` y un `datos/peliculas.json`. Fuentes desde Google Fonts con
 `preconnect` y `display=swap`.
 
-Despliegue en **Netlify** con la CLI (`netlify deploy --prod`).
+Publicada en **GitHub Pages** desde la rama `main`:
+https://mangel-creator.github.io/marvel-higher-or-lower/
+
+El plan era Netlify, pero el token de la cuenta estaba caducado y no había forma
+de renovarlo en el momento. GitHub Pages da lo mismo para una web estática y la
+autenticación ya estaba puesta en el equipo. El `netlify.toml` se queda escrito
+por si se cambia más adelante.
 
 ## Atribución
 

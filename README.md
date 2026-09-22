@@ -86,11 +86,20 @@ scripts.
 
 ## Despliegue
 
+Está publicada en **GitHub Pages**, servida desde la rama `main` en la raíz:
+
+**https://mangel-creator.github.io/marvel-higher-or-lower/**
+
+No hay build. Se sube tal cual: cada `git push` a `main` republica la web en un
+par de minutos.
+
 ```bash
-netlify deploy --prod
+git add -A; git commit -m "..."; git push
 ```
 
-No hay build. Se sube tal cual.
+El `netlify.toml` se queda por si algún día se mueve a Netlify (era el plan
+original, descartado porque el token de la cuenta había caducado). GitHub Pages
+lo ignora.
 
 ## Créditos
 
